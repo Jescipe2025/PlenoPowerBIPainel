@@ -32,7 +32,7 @@
             color: #444;
             font-size: 14px;
         }
-        input {
+        input, select {
             width: 100%;
             padding: 10px 12px;
             margin-bottom: 18px;
@@ -40,7 +40,7 @@
             border-radius: 6px;
             font-size: 14px;
         }
-        input:focus {
+        input:focus, select:focus {
             outline: none;
             border-color: #2563eb;
         }
@@ -76,18 +76,21 @@
     <div class="card">
         <div class="logo">🔒</div>
         <h2>Acesso ao Dashboard JESCIPE</h2>
-
         {% if erro %}
             <div class="erro">{{ erro }}</div>
         {% endif %}
-
         <form method="POST">
+            <label>Painel</label>
+            <select name="painel" required>
+                <option value="" disabled selected>Selecione o painel...</option>
+                <option value="estoque">📦 Estoque</option>
+                <option value="financeiro">💰 Financeiro</option>
+                <option value="compras">🛒 Compras</option>
+            </select>
             <label>Usuário</label>
             <input type="text" name="usuario" autofocus required>
-
             <label>Senha</label>
             <input type="password" name="senha" required>
-
             <button type="submit">Entrar</button>
         </form>
     </div>
