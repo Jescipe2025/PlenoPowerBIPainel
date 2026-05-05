@@ -1,5 +1,6 @@
 USUARIOS = {
-    "joao": {"senha": "123", "paineis": ["financeiro", "estoque"]},
-    "maria": {"senha": "456", "paineis": ["compras"]},
-    "admin": {"senha": "789", "paineis": ["financeiro", "estoque", "compras"]},
+    "Luciana" : {"senha": "Pleno@356", "paineis":    ["estoque"]},
+    "Thamires": {"senha": "Pleno@984", "paineis":    ["compras"]},
+    "Claudete": {"senha": "Pleno@956", "paineis":    ["financieiro"]},
+    "admin":    {"senha": "J3sc1p3@2026", "paineis": ["financeiro", "estoque", "compras"]},
 }
