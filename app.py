@@ -7,7 +7,7 @@ app.secret_key = "chave_secreta_sapleno_2024"
 
 PAINEIS = {
     "estoque": "https://app.powerbi.com/view?r=eyJrIjoiZWViYjI2NDMtNTZiZS00YmZmLWEyN2ItY2E0MjNlZWFmZjM1IiwidCI6ImRjY2U5ZTY1LWFjMGEtNDA2OS04ZWRhLTczNTQyZGYzMjNlZSJ9",
-    "financeiro": "https://claude.ai/public/artifacts/ef20d868-70a7-4e8d-a0b2-102234f827f9",
+    "financeiro": None,
     "compras": None,
 }
 
@@ -35,6 +35,10 @@ def dashboard():
     if not session.get("logado"):
         return redirect(url_for("login"))
     painel = session.get("painel")
+    if painel == "financeiro":
+        return render_template("financeiro.html")
+    if painel == "compras":
+        return render_template("dashboard.html", url=None, painel=painel)
     url = PAINEIS.get(painel)
     return render_template("dashboard.html", url=url, painel=painel)
 
