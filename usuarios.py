@@ -1,4 +1,3 @@
-# Adicione quantos usuários quiser
 USUARIOS = {
     "joao": {"senha": "123", "paineis": ["financeiro", "estoque"]},
     "maria": {"senha": "456", "paineis": ["compras"]},
